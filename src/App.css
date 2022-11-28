@@ -19,3 +19,25 @@ h2{
   color:white;
   font-size: 20px;
 }
+/* Shopping Card */
+
+.products{
+  display: flex;
+  margin:100px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.eachItem{
+  margin: 50px;
+  border:1px solid black;
+  border-radius: 10px;
+ 
+}
+.details{
+  display:flex;
+  flex-direction: column;
+  margin: 10px;
+}
+button{
+  width: 100px;
+}
