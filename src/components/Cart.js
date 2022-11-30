@@ -1,6 +1,8 @@
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import  {deleteCart}  from "../features/cardSlice";
+import { addToCart } from "../features/cardSlice";
+import { decreaseAmount } from "../features/cardSlice";
 
 function Cart() {
     const dispatch = useDispatch();
@@ -17,6 +19,9 @@ function Cart() {
                         <span>{product.category}</span> 
                         <span>{product.price} $</span> 
                         <button onClick={()=>dispatch(deleteCart(product))}> Delete </button>
+                        <button onClick={()=>dispatch(addToCart(product))}> + </button>
+                        <p>{product.cartQuantity}</p>
+                        <button onClick={()=>dispatch(decreaseAmount(product))}> - </button>
                         </div>
                     </div>
                     )}
