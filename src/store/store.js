@@ -3,6 +3,7 @@ import  productSlice  from '../features/productSlice'
 import { productsApi } from '../features/productsApi'
 import cartSlice from '../features/cardSlice'
 
+
 export const store = configureStore({
   reducer: {
     products: productSlice,
@@ -11,4 +12,5 @@ export const store = configureStore({
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(productsApi.middleware), /* https://redux-toolkit.js.org/rtk-query/api/created-api/redux-integration#middleware */
-})
+});
+
